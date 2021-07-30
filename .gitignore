@@ -7,6 +7,9 @@
 node_modules/
 dist/
 
+# Storybook
+storybook-static/
+
 # Compiled Java class files
 *.class
 
@@ -15,6 +18,7 @@ dist/
 
 # Log files
 *.log
+*.lock
 
 # Package files
 *.jar
