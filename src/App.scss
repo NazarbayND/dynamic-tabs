@@ -1,0 +1,44 @@
+// Colors
+$color-primary: white;
+$color-secondary: #eee;
+$color-accent: #f15b2c;
+$color-dark: #646464;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #6385db;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-secondary;
+}
+
+//Navigation
+.navbar {
+  width: 100vw;
+  height: 4.6rem;
+  border-bottom: 1px solid $color-primary;
+  display: flex;
+}

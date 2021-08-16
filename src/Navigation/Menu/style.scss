@@ -1,0 +1,18 @@
+.menu-list {
+  background: gray;
+  font-size: 2rem;
+}
+
+.menu-list__item {
+  padding: 1rem 2rem;
+  color: white;
+  width: 14rem;
+
+  &.module__item {
+    width: 47rem;
+    cursor: pointer;
+  }
+  &:hover {
+    background: dodgerblue;
+  }
+}

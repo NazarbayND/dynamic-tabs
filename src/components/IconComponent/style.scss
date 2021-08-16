@@ -1,0 +1,11 @@
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  width: fit-content;
+  padding: 0 0.5rem;
+  &:hover {
+    background: white;
+  }
+}

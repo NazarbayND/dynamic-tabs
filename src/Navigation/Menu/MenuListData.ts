@@ -1,122 +1,116 @@
-
-export const ModulesList = [
+export const MenuListData = [
   {
-    title: 'SCM',
-    path: '#',
+    title: "SCM",
+    path: "#",
     module: [
       {
         title: "Warehouse Management System (WMS)",
-        path: '/wms',
-        },
+        path: "/wms",
+      },
       {
         title: "Material planning and procurement (MRP/PO)",
-        path: '/mrp-po',
-        },
+        path: "/mrp-po",
+      },
       {
         title: "Supplier and Contacts",
-        path: '/supplier-contacts',
-        }
-      ]
+        path: "/supplier-contacts",
+      },
+    ],
   },
   {
-    title: 'MFG',
-    path: '#',
+    title: "MFG",
+    path: "#",
     module: [
       {
         title: "Work Order and Scheduling (WO)",
-        path: '/wo',
-        },
+        path: "/wo",
+      },
       {
         title: "Manufacturing Operations Control (MOC)",
-        path: '/moc',
-        }
-      ]
+        path: "/moc",
+      },
+    ],
   },
   {
-    title: 'ENG',
-    path: '#',
+    title: "ENG",
+    path: "#",
     module: [
       {
         title: "Statistical Quality Analytics (SQA)",
-        path: '/sqa',
+        path: "/sqa",
       },
       {
         title: "Electronic Work Instruction (EWI)",
-        path: '/ewi',
-         },
+        path: "/ewi",
+      },
       {
         title: "Engineering Change & Deviation Control  (ECO)",
-        path: '/eco',
-       },
+        path: "/eco",
+      },
       {
         title: "Engineering & Production Bid of Material (BOM)",
-        path: '/bom',
-       },
+        path: "/bom",
+      },
       {
         title: "Part Master & AML Control (PM)",
-        path: '/pm-aml',
-       },
+        path: "/pm-aml",
+      },
       {
         title: "Electronic Filing Cabinet (EFC)",
-        path: '/efc',
-       },
-      ]
+        path: "/efc",
+      },
+    ],
   },
   {
-    title: 'SGA',
-    path: '#',
+    title: "SGA",
+    path: "#",
     module: [
       {
         title: "Sales",
-        path: '/sales',
-        },
+        path: "/sales",
+      },
       {
         title: "Account Receivable (AR)",
-        path: '/ar',
+        path: "/ar",
       },
       {
         title: "Account Payable (AP)",
-        path: '/ap',
-       },
+        path: "/ap",
+      },
       {
         title: "General Ledger (GL)",
-        path: '/gl',
-        },
+        path: "/gl",
+      },
       {
         title: "Customer & Contacts",
-        path: '/customer-contacts',
-        },
+        path: "/customer-contacts",
+      },
       {
         title: "Human Resources (HR)",
-        path: '/hr',
-        }
-      ]
+        path: "/hr",
+      },
+    ],
   },
   {
-    title: 'SETTINGS',
-    path: '#',
+    title: "SETTINGS",
+    path: "#",
     module: [
       {
         title: "License Information",
-        path: '/license',
-        },
+        path: "/license",
+      },
       {
         title: "CUBE User Access",
-        path: '/user',
-        },
+        path: "/user",
+      },
       {
         title: "Quick View Settings",
-        path: '/quick-view',   
-         },
+        path: "/quick-view",
+      },
       {
         title: "System Settings",
-        path: '/system',
-         }
-      ]
+        path: "/system",
+      },
+    ],
   },
-/*   {
-    title: <> <Person />    <Exit /> </>,
-    path: '/login',
-    module:  []
-  } */
 ];

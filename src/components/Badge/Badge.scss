@@ -1,0 +1,30 @@
+.badge {
+  position: absolute;
+  font-size: 9px;
+  background: #f15b2c;
+  border-radius: 17.5px;
+  line-height: 10px;
+  padding: 0 2px;
+}
+
+.badge--top-right {
+  top: 10%;
+  right: 15%;
+}
+.badge--top-left {
+  top: 10%;
+  left: 15%;
+}
+.badge--bottom-right {
+  bottom: 10%;
+  right: 20%;
+}
+.badge--bottom-left {
+  bottom: 10%;
+  left: 20%;
+}
+
+.icon-badge {
+  display: flex;
+  justify-content: center;
+}
