@@ -1,10 +1,17 @@
 import React from "react";
-import Badge, { position } from "./Badge";
+import { ReactElement } from "react";
+import Badge, { badgePosition } from "./Badge";
 
-const IconWithBadge = ({ children, position, count }) => {
+interface Props {
+  icon: ReactElement;
+  position: badgePosition;
+  count: number;
+}
+
+const IconWithBadge: React.FC<Props> = ({ icon, position, count }) => {
   return (
     <div className="icon-badge">
-      {children}
+      {icon}
       <Badge count={count} position={position} />
     </div>
   );

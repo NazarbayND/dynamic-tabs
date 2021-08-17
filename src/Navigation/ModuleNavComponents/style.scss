@@ -1,0 +1,10 @@
+$color-dark: #646464;
+.module-nav {
+  display: flex;
+  justify-self: flex-end;
+}
+.timer {
+  font-size: 2rem;
+  color: $color-dark;
+  font-weight: 100;
+}

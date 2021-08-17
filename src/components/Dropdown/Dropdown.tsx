@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, FC } from "react";
+import React, { useState, FC, ReactElement } from "react";
 //style
 import "./style.scss";
 

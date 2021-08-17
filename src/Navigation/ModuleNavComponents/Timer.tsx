@@ -1,17 +1,12 @@
 import React from "react";
-
-//components
 import IconContainer from "../IconComponent/IconContainer";
 
-//icons
-import { HelpIcon } from "../../assets/icons";
-
-const Help = () => {
+const Timer = () => {
   return (
     <IconContainer>
-      <HelpIcon />
+      <div className="timer">:00</div>
     </IconContainer>
   );
 };
 
-export default Help;
+export default Timer;

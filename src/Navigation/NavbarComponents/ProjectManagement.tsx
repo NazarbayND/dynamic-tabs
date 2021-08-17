@@ -1,6 +1,6 @@
 import React from "react";
 //components
-import IconContainer from "../../components/IconComponent/IconContainer";
+import IconContainer from "../IconComponent/IconContainer";
 //icons
 import { PmIcon } from "../../assets/icons";
 const ProjectManagement = () => {

@@ -1,17 +1,13 @@
 import React from "react";
-
-//components
+import { PlusIcon } from "../../assets/icons";
 import IconContainer from "../IconComponent/IconContainer";
 
-//icons
-import { HelpIcon } from "../../assets/icons";
-
-const Help = () => {
+const Plus = () => {
   return (
     <IconContainer>
-      <HelpIcon />
+      <PlusIcon />
     </IconContainer>
   );
 };
 
-export default Help;
+export default Plus;

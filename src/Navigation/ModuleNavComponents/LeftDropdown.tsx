@@ -1,25 +1,21 @@
 import React from "react";
-//Icons
-import { ReactComponent as MenuIcon } from "../../components/icons/menuIcon.svg";
-//Components
 import Dropdown from "../../components/Dropdown/Dropdown";
-import MenuList from "./MenuList";
 import IconContainer from "../IconComponent/IconContainer";
-//style
-import "./style.scss";
 
-const Menu = () => {
+const LeftDropdown = ({ Icon, content }) => {
   return (
     <Dropdown
       main={
         <IconContainer>
-          <MenuIcon />
+          <Icon />
         </IconContainer>
       }
-      content={<MenuList />}
       position="top"
+      content={content}
+      style={{ display: "flex", justifyContent: "flex-end" }}
+      contentStyle={{ top: "4.5rem" }}
     />
   );
 };
 
-export default Menu;
+export default LeftDropdown;

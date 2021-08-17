@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-
+//style
 import "./Badge.scss";
 
 interface Props {
-  position: position;
+  position: badgePosition;
   count: number;
 }
 
-export enum position {
+export enum badgePosition {
   topRight = "badge--top-right",
   topLeft = "badge--top-left",
   bottomRight = "badge--bottom-right",

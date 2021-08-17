@@ -4,6 +4,7 @@ import Menu from "./Menu/Menu";
 import Notifications from "./NavbarComponents/Notifications";
 import ProjectManagement from "./NavbarComponents/ProjectManagement";
 import Help from "./NavbarComponents/Help";
+import ModuleNavItems from "./ModuleNavComponents/ModuleNavItems";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,7 @@ const Navbar = () => {
       <Notifications />
       <ProjectManagement />
       <Help />
+      <ModuleNavItems />
     </div>
   );
 };

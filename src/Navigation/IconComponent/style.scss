@@ -1,11 +1,16 @@
+$color-dark: #646464;
+
 .icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   height: 4.5rem;
+  min-width: 4rem;
   width: fit-content;
   padding: 0 0.5rem;
   &:hover {
     background: white;
+    border-bottom: 1px solid $color-dark;
   }
 }

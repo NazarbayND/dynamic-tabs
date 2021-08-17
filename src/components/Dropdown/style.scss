@@ -16,20 +16,21 @@
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 
   &.top {
-    transform: scaleY(0.5);
+    transform: translateY(-5%);
     transform-origin: top;
 
     &.open {
       pointer-events: all;
-      transform: scaleY(1);
+      transform: translateY(0);
       opacity: 1;
     }
   }
+
   &.right {
-    transform: scaleX(0.5);
+    transform: scaleX(0.9);
     transform-origin: left;
 
     &.open {
@@ -38,8 +39,9 @@
       opacity: 1;
     }
   }
+
   &.left {
-    transform: scaleX(0.5);
+    transform: scaleX(0.9);
     transform-origin: right;
 
     &.open {
