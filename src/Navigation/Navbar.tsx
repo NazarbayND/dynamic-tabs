@@ -5,6 +5,8 @@ import Notifications from "./NavbarComponents/Notifications";
 import ProjectManagement from "./NavbarComponents/ProjectManagement";
 import Help from "./NavbarComponents/Help";
 import ModuleNavItems from "./ModuleNavComponents/ModuleNavItems";
+import Tab from "./Tabs/Tab";
+import Tabs from "./Tabs/Tabs";
 
 const Navbar = () => {
   return (
@@ -15,6 +17,7 @@ const Navbar = () => {
       <ProjectManagement />
       <Help />
       <ModuleNavItems />
+      <Tabs />
     </div>
   );
 };

@@ -1,4 +1,5 @@
-$color-dark: #646464;
+@import "../../style/variables";
+
 .module-nav {
   display: flex;
   justify-self: flex-end;

@@ -11,11 +11,8 @@ const MenuList = () => {
       {MenuListData.map((section) => {
         return (
           <Dropdown
-            main={
-              <div className="menu-list__item" key={section.title}>
-                {section.title}
-              </div>
-            }
+            key={section.title}
+            main={<div className="menu-list__item">{section.title}</div>}
             content={<MenuSubList modules={section.module} />}
             position="right"
             style={{ display: "flex" }}

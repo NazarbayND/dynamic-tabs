@@ -1,11 +1,13 @@
+@import "../../style/variables";
+
 .menu-list {
-  background: gray;
+  background: $color-dark;
   font-size: 2rem;
 }
 
 .menu-list__item {
   padding: 1rem 2rem;
-  color: white;
+  color: $color-primary;
   width: 14rem;
 
   &.module__item {
@@ -13,6 +15,6 @@
     cursor: pointer;
   }
   &:hover {
-    background: dodgerblue;
+    background: $color-blue;
   }
 }

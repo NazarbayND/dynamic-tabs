@@ -36,7 +36,11 @@ const Options = () => {
       content={
         <div className="menu-list">
           {optionsList.map((option) => {
-            return <div className="menu-list__item">{option.title}</div>;
+            return (
+              <div key={option.title} className="menu-list__item">
+                {option.title}
+              </div>
+            );
           })}
         </div>
       }

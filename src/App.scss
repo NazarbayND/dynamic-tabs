@@ -1,8 +1,4 @@
-// Colors
-$color-primary: white;
-$color-secondary: #eee;
-$color-accent: #f15b2c;
-$color-dark: #646464;
+@import "./style/variables";
 
 * {
   padding: 0;
@@ -26,7 +22,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #6385db;
+  color: $color-blue;
 }
 
 .App {
