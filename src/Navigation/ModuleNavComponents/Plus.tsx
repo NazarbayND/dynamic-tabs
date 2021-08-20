@@ -1,13 +1,4 @@
-import React from "react";
 import { PlusIcon } from "../../assets/icons";
-import IconContainer from "../IconComponent/IconContainer";
+import withIconContainer from "../IconComponent/withIconContainer";
 
-const Plus = () => {
-  return (
-    <IconContainer>
-      <PlusIcon />
-    </IconContainer>
-  );
-};
-
-export default Plus;
+export default withIconContainer(PlusIcon);

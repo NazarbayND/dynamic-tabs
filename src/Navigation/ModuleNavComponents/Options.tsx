@@ -1,7 +1,10 @@
 import React from "react";
+//StaticData
 import { OptionsIcon } from "../../assets/icons";
+import withDropdown from "../../components/Dropdown/withDropdown";
+import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
+import withIconContainer from "../IconComponent/withIconContainer";
 
-import LeftDropdown from "./LeftDropdown";
 const optionsList = [
   {
     path: "/reports",
@@ -29,23 +32,20 @@ const optionsList = [
   },
 ];
 
-const Options = () => {
+const OptionsContent = ({ ...rest }) => {
   return (
-    <LeftDropdown
-      Icon={OptionsIcon}
-      content={
-        <div className="menu-list">
-          {optionsList.map((option) => {
-            return (
-              <div key={option.title} className="menu-list__item">
-                {option.title}
-              </div>
-            );
-          })}
-        </div>
-      }
-    />
+    <div className="menu-list">
+      {optionsList.map((option) => {
+        return (
+          <div key={option.title} className="menu-list__item">
+            {option.title}
+          </div>
+        );
+      })}
+    </div>
   );
 };
 
-export default Options;
+export default withLeftDropdown(
+  withDropdown(withIconContainer(OptionsIcon), OptionsContent)
+);

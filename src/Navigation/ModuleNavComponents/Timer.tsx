@@ -1,12 +1,8 @@
 import React from "react";
-import IconContainer from "../IconComponent/IconContainer";
+import withIconContainer from "../IconComponent/withIconContainer";
 
-const Timer = () => {
-  return (
-    <IconContainer>
-      <div className="timer">:00</div>
-    </IconContainer>
-  );
+const Timer = ({ ...rest }) => {
+  return <div className="timer">:00</div>;
 };
 
-export default Timer;
+export default withIconContainer(Timer);

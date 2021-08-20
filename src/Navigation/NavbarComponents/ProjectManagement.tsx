@@ -1,14 +1,6 @@
-import React from "react";
 //components
-import IconContainer from "../IconComponent/IconContainer";
 //icons
 import { PmIcon } from "../../assets/icons";
-const ProjectManagement = () => {
-  return (
-    <IconContainer>
-      <PmIcon />
-    </IconContainer>
-  );
-};
+import withIconContainer from "../IconComponent/withIconContainer";
 
-export default ProjectManagement;
+export default withIconContainer(PmIcon);

@@ -15,14 +15,13 @@
   display: flex;
   align-items: center;
   border-right: 1px solid $color-secondary;
-  border-bottom: 1px solid $color-dark;
   background: $color-primary;
   overflow: hidden;
   &.non-active {
     background: $color-secondary;
     border-bottom: none;
     &:hover {
-      background: $color-primary;
+      background: lighten($color: $color-secondary, $amount: 4);
     }
   }
 }

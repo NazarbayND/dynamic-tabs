@@ -1,28 +1,19 @@
-import React from "react";
 //icons
 import { NotificationsIcon } from "../../assets/icons";
 //components
-import IconContainer from "../IconComponent/IconContainer";
-import IconWithBadge from "../../components/Badge/IconWithBadge";
+
 //types
+
+import withIconContainer from "../IconComponent/withIconContainer";
+import withBadge from "../../components/Badge/IconWithBadge";
 import { badgePosition } from "../../components/Badge/Badge";
 
-const Notifications = () => {
-  return (
-    <IconContainer>
-      <IconWithBadge
-        icon={
-          <IconWithBadge
-            icon={<NotificationsIcon />}
-            position={badgePosition.topLeft}
-            count={1}
-          />
-        }
-        position={badgePosition.topRight}
-        count={9}
-      />
-    </IconContainer>
-  );
+const LeftNotificationBadge = withBadge(NotificationsIcon);
+const RightNotification = () => {
+  return <LeftNotificationBadge position={badgePosition.topLeft} count={1} />;
 };
-
-export default Notifications;
+const RightNotificationBadge = withBadge(RightNotification);
+const Notifications = () => {
+  return <RightNotificationBadge position={badgePosition.topRight} count={9} />;
+};
+export default withIconContainer(Notifications);

@@ -4,11 +4,19 @@ interface IModule {
   title: string;
   path: string;
 }
+
 interface Props {
   modules: IModule[];
   onModuleClick: (module) => void;
+  setShowDropdown?: React.Dispatch<boolean>;
 }
-const MenuSubList: React.FC<Props> = ({ modules, onModuleClick }) => {
+
+const MenuSubList: React.FC<Props> = ({
+  modules,
+  onModuleClick,
+  setShowDropdown,
+  ...rest
+}) => {
   return (
     <div className="menu-list">
       {modules.map((module) => {
@@ -18,6 +26,7 @@ const MenuSubList: React.FC<Props> = ({ modules, onModuleClick }) => {
             className="menu-list__item module__item"
             onClick={() => {
               onModuleClick(module);
+              setShowDropdown(false);
             }}
           >
             {module.title}

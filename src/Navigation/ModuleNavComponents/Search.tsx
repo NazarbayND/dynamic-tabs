@@ -1,15 +1,13 @@
 import React from "react";
 import { SearchIcon } from "../../assets/icons";
 import Card from "../../components/Cards/Card";
-import LeftDropdown from "./LeftDropdown";
+import withDropdown from "../../components/Dropdown/withDropdown";
+import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
+import withIconContainer from "../IconComponent/withIconContainer";
 
-const Search = () => {
-  return (
-    <LeftDropdown
-      Icon={SearchIcon}
-      content={<Card content={"test search content"} />}
-    />
-  );
+const SearchContent = ({ ...rest }) => {
+  return <Card content={"test search content"} />;
 };
-
-export default Search;
+export default withLeftDropdown(
+  withDropdown(withIconContainer(SearchIcon), SearchContent)
+);

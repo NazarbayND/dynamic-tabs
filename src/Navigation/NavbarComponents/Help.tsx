@@ -1,17 +1,7 @@
-import React from "react";
-
 //components
-import IconContainer from "../IconComponent/IconContainer";
 
 //icons
 import { HelpIcon } from "../../assets/icons";
+import withIconContainer from "../IconComponent/withIconContainer";
 
-const Help = () => {
-  return (
-    <IconContainer>
-      <HelpIcon />
-    </IconContainer>
-  );
-};
-
-export default Help;
+export default withIconContainer(HelpIcon);

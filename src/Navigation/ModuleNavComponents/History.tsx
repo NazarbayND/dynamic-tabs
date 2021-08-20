@@ -1,15 +1,13 @@
 import React from "react";
 import { HistoryIcon } from "../../assets/icons";
 import Card from "../../components/Cards/Card";
-import LeftDropdown from "./LeftDropdown";
+import withDropdown from "../../components/Dropdown/withDropdown";
+import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
+import withIconContainer from "../IconComponent/withIconContainer";
 
-const History = () => {
-  return (
-    <LeftDropdown
-      Icon={HistoryIcon}
-      content={<Card content={"test history content"} />}
-    />
-  );
+const HistoryContent = ({ ...rest }) => {
+  return <Card content={"test history content"} />;
 };
-
-export default History;
+export default withLeftDropdown(
+  withDropdown(withIconContainer(HistoryIcon), HistoryContent)
+);

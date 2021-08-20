@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 //icons
 import { FavoritesIcon } from "../../assets/icons";
 //components
-import IconContainer from "../IconComponent/IconContainer";
-import Dropdown from "../../components/Dropdown/Dropdown";
 import MenuSubList from "../Menu/MenuSubList";
+import withDropdown from "../../components/Dropdown/withDropdown";
+import withIconContainer from "../IconComponent/withIconContainer";
 
 const FavoritesData = [
   {
@@ -29,24 +29,15 @@ const FavoritesData = [
   },
 ];
 
-const Favorites = () => {
+const FavoritesContent = ({ ...rest }) => {
   const handleModuleClick = (module) => {};
   return (
-    <Dropdown
-      main={
-        <IconContainer>
-          <FavoritesIcon />
-        </IconContainer>
-      }
-      content={
-        <MenuSubList
-          modules={FavoritesData}
-          onModuleClick={handleModuleClick}
-        />
-      }
-      position="top"
+    <MenuSubList
+      modules={FavoritesData}
+      onModuleClick={handleModuleClick}
+      {...rest}
     />
   );
 };
 
-export default Favorites;
+export default withDropdown(withIconContainer(FavoritesIcon), FavoritesContent);

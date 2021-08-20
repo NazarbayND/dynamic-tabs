@@ -1,28 +1,41 @@
-import React, { useState } from "react";
-import Dropdown from "../../components/Dropdown/Dropdown";
+import React from "react";
 
 //Data
 import { MenuListData } from "./MenuListData";
-import MenuSubList from "./MenuSubList";
 
-const MenuList = ({ onModuleClick }) => {
+//State
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
+import { tabAdd } from "../../store/tabs/tabs";
+//Components
+import MenuListItem from "./MenuListItem";
+
+interface Props {
+  setShowDropdown?: React.Dispatch<boolean>;
+}
+
+const MenuList: React.FC<Props> = ({ setShowDropdown, ...rest }) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleModuleClick = (module) => {
+    dispatch(tabAdd({ module, history }));
+    setShowDropdown(false);
+  };
+
   return (
     <div className="menu-list">
       {MenuListData.map((section) => {
         return (
-          <Dropdown
+          <MenuListItem
             key={section.title}
-            main={<div className="menu-list__item">{section.title}</div>}
-            content={
-              <MenuSubList
-                modules={section.module}
-                onModuleClick={onModuleClick}
-              />
-            }
             position="right"
             style={{ display: "flex" }}
             mainStyle={{ zIndex: 100 }}
             contentStyle={{ marginLeft: "14rem", zIndex: 90 }}
+            title={section.title}
+            modules={section.module}
+            onModuleClick={handleModuleClick}
           />
         );
       })}

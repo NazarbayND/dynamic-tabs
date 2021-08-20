@@ -26,7 +26,7 @@ const Tab: React.FC<Props> = ({ tab, onTabClick, onTabClose }) => {
         onClick={handleTabClick}
       >
         <span className="tab__title">{tab.title}</span>
-      </div>{" "}
+      </div>
       <CloseIcon className="tab__close-icon" onClick={() => onTabClose()} />
     </div>
   );

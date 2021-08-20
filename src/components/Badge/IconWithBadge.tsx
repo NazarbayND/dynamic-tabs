@@ -1,19 +1,21 @@
 import React from "react";
-import { ReactElement } from "react";
+import { RestProps } from "../../types/types";
 import Badge, { badgePosition } from "./Badge";
 
 interface Props {
-  icon: ReactElement;
   position: badgePosition;
   count: number;
 }
-
-const IconWithBadge: React.FC<Props> = ({ icon, position, count }) => {
-  return (
-    <div className="icon-badge">
-      {icon}
-      <Badge count={count} position={position} />
-    </div>
-  );
+const withBadge = (Component: React.JSXElementConstructor<RestProps>) => {
+  const withBadge: React.FC<Props> = ({ position, count, ...props }) => {
+    return (
+      <div className="icon-badge">
+        <Component {...props} />
+        <Badge count={count} position={position} />
+      </div>
+    );
+  };
+  return withBadge;
 };
-export default IconWithBadge;
+
+export default withBadge;
