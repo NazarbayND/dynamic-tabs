@@ -1,4 +1,4 @@
-import React, { useState, FC, ReactElement } from "react";
+import React, { FC, ReactElement, useState, useEffect } from "react";
 //style
 import "./style.scss";
 
@@ -20,6 +20,7 @@ const Dropdown: FC<Props> = ({
   contentStyle,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className="dropdown-container"

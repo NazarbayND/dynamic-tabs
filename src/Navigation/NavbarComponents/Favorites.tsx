@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //icons
 import { FavoritesIcon } from "../../assets/icons";
 //components
@@ -30,6 +30,7 @@ const FavoritesData = [
 ];
 
 const Favorites = () => {
+  const handleModuleClick = (module) => {};
   return (
     <Dropdown
       main={
@@ -37,7 +38,12 @@ const Favorites = () => {
           <FavoritesIcon />
         </IconContainer>
       }
-      content={<MenuSubList modules={FavoritesData} />}
+      content={
+        <MenuSubList
+          modules={FavoritesData}
+          onModuleClick={handleModuleClick}
+        />
+      }
       position="top"
     />
   );

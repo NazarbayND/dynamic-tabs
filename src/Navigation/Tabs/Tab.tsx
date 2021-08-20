@@ -20,14 +20,14 @@ const Tab: React.FC<Props> = ({ tab, onTabClick, onTabClose }) => {
     } else onTabClick();
   };
   return (
-    <div
-      className={`tab ${tab.active ? "" : "non-active"}`}
-      onClick={handleTabClick}
-    >
-      <span className="tab__title">{tab.title}</span>
-      <button className="btn--icon" name="closeButton">
-        <CloseIcon className="tab__close-icon" onClick={() => onTabClose()} />
-      </button>
+    <div className="tab-container">
+      <div
+        className={`tab ${tab.active ? "" : "non-active"}`}
+        onClick={handleTabClick}
+      >
+        <span className="tab__title">{tab.title}</span>
+      </div>{" "}
+      <CloseIcon className="tab__close-icon" onClick={() => onTabClose()} />
     </div>
   );
 };

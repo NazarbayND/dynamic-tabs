@@ -6,13 +6,20 @@ interface IModule {
 }
 interface Props {
   modules: IModule[];
+  onModuleClick: (module) => void;
 }
-const MenuSubList: React.FC<Props> = ({ modules }) => {
+const MenuSubList: React.FC<Props> = ({ modules, onModuleClick }) => {
   return (
     <div className="menu-list">
       {modules.map((module) => {
         return (
-          <div key={module.title} className="menu-list__item module__item">
+          <div
+            key={module.title}
+            className="menu-list__item module__item"
+            onClick={() => {
+              onModuleClick(module);
+            }}
+          >
             {module.title}
           </div>
         );

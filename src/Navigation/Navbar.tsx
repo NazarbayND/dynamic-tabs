@@ -7,6 +7,7 @@ import Help from "./NavbarComponents/Help";
 import ModuleNavItems from "./ModuleNavComponents/ModuleNavItems";
 import Tab from "./Tabs/Tab";
 import Tabs from "./Tabs/Tabs";
+import MenuClick from "./Menu/MenuClick";
 
 const Navbar = () => {
   return (
@@ -16,7 +17,7 @@ const Navbar = () => {
       <Notifications />
       <ProjectManagement />
       <Help />
-      <ModuleNavItems />
+      <MenuClick />
       <Tabs />
     </div>
   );

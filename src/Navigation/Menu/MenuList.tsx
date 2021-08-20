@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Dropdown from "../../components/Dropdown/Dropdown";
 
 //Data
 import { MenuListData } from "./MenuListData";
 import MenuSubList from "./MenuSubList";
 
-const MenuList = () => {
+const MenuList = ({ onModuleClick }) => {
   return (
     <div className="menu-list">
       {MenuListData.map((section) => {
@@ -13,7 +13,12 @@ const MenuList = () => {
           <Dropdown
             key={section.title}
             main={<div className="menu-list__item">{section.title}</div>}
-            content={<MenuSubList modules={section.module} />}
+            content={
+              <MenuSubList
+                modules={section.module}
+                onModuleClick={onModuleClick}
+              />
+            }
             position="right"
             style={{ display: "flex" }}
             mainStyle={{ zIndex: 100 }}
