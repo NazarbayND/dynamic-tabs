@@ -1,12 +1,11 @@
 import React from "react";
+
 import { CloseIcon } from "../../assets/icons";
+import { TabI } from "../../types/types";
 import "./style.scss";
 
 interface Props {
-  tab: {
-    title: string;
-    active?: boolean;
-  };
+  tab: TabI;
   onTabClick: () => void;
   onTabClose: () => void;
 }

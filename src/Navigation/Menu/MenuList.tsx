@@ -9,6 +9,7 @@ import { useHistory } from "react-router";
 import { tabAdd } from "../../store/tabs/tabs";
 //Components
 import MenuListItem from "./MenuListItem";
+import { TabI } from "../../types/types";
 
 interface Props {
   setShowDropdown?: React.Dispatch<boolean>;
@@ -18,8 +19,8 @@ const MenuList: React.FC<Props> = ({ setShowDropdown, ...rest }) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleModuleClick = (module) => {
-    dispatch(tabAdd({ module, history }));
+  const handleModuleClick = (tab: TabI) => {
+    dispatch(tabAdd({ tab, history }));
     setShowDropdown(false);
   };
 

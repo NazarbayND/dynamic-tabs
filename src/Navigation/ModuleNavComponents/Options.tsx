@@ -5,6 +5,11 @@ import withDropdown from "../../components/Dropdown/withDropdown";
 import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
 import withIconContainer from "../IconComponent/withIconContainer";
 
+interface OptionI {
+  path: string;
+  title: string;
+}
+
 const optionsList = [
   {
     path: "/reports",
@@ -35,7 +40,7 @@ const optionsList = [
 const OptionsContent = ({ ...rest }) => {
   return (
     <div className="menu-list">
-      {optionsList.map((option) => {
+      {optionsList.map((option: OptionI) => {
         return (
           <div key={option.title} className="menu-list__item">
             {option.title}

@@ -12,7 +12,9 @@ const Main = () => {
       <Switch>
         {/* Add which component should be rendered at what path:  */}
         <Route exact path="/" component={Home} />
-        <Route path="/sqa" component={SQA} />
+        <Route path="/sqa">
+          <SQA />
+        </Route>
         <Route path="*">
           <NotFound />
         </Route>

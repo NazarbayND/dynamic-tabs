@@ -1,6 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { TabI } from "../../types/types";
+import { RootState } from "../configureStore";
 
-const saveState = (state) => {
+const saveState = (state: TabI[]) => {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem("tabs", serializedState);
@@ -9,7 +11,7 @@ const saveState = (state) => {
   }
 };
 
-const loadState = () => {
+const loadState: () => TabI[] = () => {
   try {
     const serializedState = localStorage.getItem("tabs");
     if (serializedState === null) {
@@ -21,30 +23,35 @@ const loadState = () => {
   }
 };
 
-const initialState = loadState();
+const initialState: TabI[] = loadState();
+
+interface TabAndHistoryI {
+  tab: TabI;
+  history: any;
+}
 
 const tabsSlice = createSlice({
   name: "tabs",
   initialState: initialState,
   reducers: {
-    tabAdd: (tabs, action) => {
-      const { module, history } = action.payload;
+    tabAdd: (tabs, action: PayloadAction<TabAndHistoryI>) => {
+      const { tab, history } = action.payload;
       if (tabs.length === 5) return;
-      const idx = tabs.findIndex((item) => item.path === module.path);
+      const idx = tabs.findIndex((item) => item.path === tab.path);
       tabs.forEach((item) => (item.active = false));
       if (idx >= 0) {
         tabs[idx].active = true;
       } else {
         const newTab = {
-          ...module,
+          ...tab,
           active: true,
         };
         tabs.push(newTab);
       }
-      history.push(module.path);
+      history.push(tab.path);
       saveState(tabs);
     },
-    tabClick: (tabs, action) => {
+    tabClick: (tabs, action: PayloadAction<TabAndHistoryI>) => {
       const { tab, history } = action.payload;
       tabs.forEach((item) => {
         if (item.title === tab.title) {
@@ -54,7 +61,7 @@ const tabsSlice = createSlice({
       history.push(tab.path);
       saveState(tabs);
     },
-    tabClose: (tabs, action) => {
+    tabClose: (tabs, action: PayloadAction<TabAndHistoryI>) => {
       const { tab, history } = action.payload;
       if (tab.active) {
         const idx = tabs.findIndex((item) => item.title === tab.title);
@@ -72,5 +79,11 @@ const tabsSlice = createSlice({
     },
   },
 });
+
+export const selectedTab = createSelector(
+  (state: RootState) => state,
+  (state: RootState) => state.tabs.filter((item) => item.active === true)
+);
+
 export const { tabClick, tabClose, tabAdd } = tabsSlice.actions;
 export default tabsSlice.reducer;

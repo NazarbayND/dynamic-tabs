@@ -5,6 +5,7 @@ import { FavoritesIcon } from "../../assets/icons";
 import MenuSubList from "../Menu/MenuSubList";
 import withDropdown from "../../components/Dropdown/withDropdown";
 import withIconContainer from "../IconComponent/withIconContainer";
+import { TabI } from "../../types/types";
 
 const FavoritesData = [
   {
@@ -30,7 +31,7 @@ const FavoritesData = [
 ];
 
 const FavoritesContent = ({ ...rest }) => {
-  const handleModuleClick = (module) => {};
+  const handleModuleClick = (tab: TabI) => {};
   return (
     <MenuSubList
       modules={FavoritesData}

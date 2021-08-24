@@ -1,35 +1,22 @@
 import React from "react";
 //style
 import "./style.scss";
+//Router
+import { Route, Switch } from "react-router";
+import SQAModuleNav from "../../Sections/ENG/SQA/SQAModuleNav";
 //components
-import History from "./History";
-import Options from "./Options";
-import Plus from "./Plus";
-import Search from "./Search";
-import Timer from "./Timer";
 
-interface Props {
-  search?: {};
-  plus?: {};
-  timer?: {};
-  history?: {};
-  options?: {};
-}
+interface Props {}
 
-const ModuleNavItems: React.FC<Props> = ({
-  search,
-  plus,
-  timer,
-  history,
-  options,
-}) => {
+const ModuleNavItems: React.FC<Props> = () => {
   return (
     <div className="module-nav">
-      <Search />
-      <Plus />
-      <Timer />
-      <History />
-      <Options />
+      <Switch>
+        <Route path="/sqa">
+          <SQAModuleNav />
+        </Route>
+        <Route path="*"></Route>
+      </Switch>
     </div>
   );
 };
