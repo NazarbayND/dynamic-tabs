@@ -8,8 +8,10 @@ import { ReactComponent as PlusIcon } from "./add.svg";
 import { ReactComponent as HistoryIcon } from "./refresh-history.svg";
 import { ReactComponent as OptionsIcon } from "./option-dots.svg";
 import { ReactComponent as CloseIcon } from "./x-button.svg";
+import { ReactComponent as LogoIcon } from "./logo.svg";
 
 export {
+  LogoIcon,
   NotificationsIcon,
   FavoritesIcon,
   MenuIcon,

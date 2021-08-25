@@ -37,7 +37,7 @@ const optionsList = [
   },
 ];
 
-const OptionsContent = ({ ...rest }) => {
+const OptionsContent = () => {
   return (
     <div className="menu-list">
       {optionsList.map((option: OptionI) => {

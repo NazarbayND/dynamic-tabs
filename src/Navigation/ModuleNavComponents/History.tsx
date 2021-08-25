@@ -5,7 +5,7 @@ import withDropdown from "../../components/Dropdown/withDropdown";
 import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
 import withIconContainer from "../IconComponent/withIconContainer";
 
-const HistoryContent = ({ ...rest }) => {
+const HistoryContent = () => {
   return <Card content={"test history content"} />;
 };
 export default withLeftDropdown(

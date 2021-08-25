@@ -1,13 +1,12 @@
 import "./App.scss";
-
-import Main from "./Navigation/Main";
-import Navbar from "./Navigation/Navbar";
+import LoginPage from "./pages/LoginPage";
+import MainPage from "./pages/MainPage";
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
-      <Main />
+      <MainPage />
+      {/* <LoginPage /> */}
     </div>
   );
 };

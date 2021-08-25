@@ -5,7 +5,7 @@ import withDropdown from "../../components/Dropdown/withDropdown";
 import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
 import withIconContainer from "../IconComponent/withIconContainer";
 
-const SearchContent = ({ content, ...rest }) => {
+const SearchContent = ({ content }) => {
   return <Card content={content} />;
 };
 export default withLeftDropdown(

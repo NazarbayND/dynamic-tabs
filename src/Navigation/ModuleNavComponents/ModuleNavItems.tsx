@@ -3,8 +3,8 @@ import React from "react";
 import "./style.scss";
 //Router
 import { Route, Switch } from "react-router";
-import SQAModuleNav from "../../Sections/ENG/SQA/SQAModuleNav";
 //components
+import SQAModuleNav from "../../Sections/ENG/SQA/SQAModuleNav";
 
 interface Props {}
 
