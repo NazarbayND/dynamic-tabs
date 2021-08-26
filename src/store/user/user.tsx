@@ -4,19 +4,34 @@ import { RootState } from "../configureStore";
 const userSlice = createSlice({
   name: "user",
   initialState: {
-    email: "dsadsad",
+    error: "",
+    email: "",
   },
   reducers: {
-    loginAction: (state, action) => {},
-    loggedIn: (state, action) => {
+    getUser: () => {},
+    loginAction: (state, action) => {
+      console.log("login action");
+    },
+    setUser: (state, action) => {
       console.log(action.payload);
       return action.payload;
     },
+    setToken: (state, action) => {},
     logout: (state, action) => {
       console.log("decrement");
+    },
+    loginFailed: (state, action) => {
+      state.error = action.payload;
     },
   },
 });
 
-export const { loginAction, logout, loggedIn } = userSlice.actions;
+export const {
+  loginAction,
+  logout,
+  setUser,
+  loginFailed,
+  getUser,
+  setToken,
+} = userSlice.actions;
 export default userSlice.reducer;

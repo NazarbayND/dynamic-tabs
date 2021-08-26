@@ -2,8 +2,9 @@ import React from "react";
 import { LogoIcon } from "../assets/icons";
 import Form from "../components/Forms/Form";
 import * as yup from "yup";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginAction } from "../store/user/user";
+import { RootState } from "../store/configureStore";
 
 const schema = yup.object().shape({
   username: yup.string().required(),
@@ -30,6 +31,7 @@ const LoginPage = () => {
   const handleSubmit = (data) => {
     dispatch(loginAction({ ...data }));
   };
+  const user = useSelector((state: RootState) => state.user);
   return (
     <div className="login">
       <LogoIcon />
@@ -62,6 +64,7 @@ const LoginPage = () => {
         // ]}
         mode="onSubmit"
       />
+      {user.error && <p className="text--danger">{user.error}</p>}
     </div>
   );
 };

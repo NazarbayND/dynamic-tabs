@@ -20,7 +20,7 @@ const MenuList: React.FC<Props> = ({ setShowDropdown, ...rest }) => {
   const history = useHistory();
 
   const handleModuleClick = (tab: TabI) => {
-    dispatch(tabAdd({ tab, history }));
+    dispatch(tabAdd(tab));
     setShowDropdown(false);
   };
 

@@ -1,20 +1,6 @@
-export const saveState = async (key: string, state) => {
-  try {
-    const serializedState = JSON.stringify(state);
-    localStorage.setItemAsync(key, serializedState);
-  } catch (err) {
-    //error handler
-  }
-};
+export const saveState = (key: string, state) =>
+  localStorage.setItem(key, JSON.stringify(state));
 
-export const loadState = async (key: string) => {
-  try {
-    const serializedState = localStorage.getItemAsync(key);
-    if (serializedState === null) {
-      return null;
-    }
-    return JSON.parse(serializedState);
-  } catch (err) {
-    return err;
-  }
-};
+export const loadState = (key: string) => JSON.parse(localStorage.getItem(key));
+
+export const removeState = (key: string) => localStorage.removeItem(key);
