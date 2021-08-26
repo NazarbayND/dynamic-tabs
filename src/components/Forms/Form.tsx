@@ -83,7 +83,7 @@ const Form: React.FC<Props> = ({
         </div>
       )}
 
-      <Button onClick={handleSubmit(onSubmit)}>Войти</Button>
+      <Button onClick={handleSubmit(onSubmit)}>Login</Button>
     </form>
   );
 };

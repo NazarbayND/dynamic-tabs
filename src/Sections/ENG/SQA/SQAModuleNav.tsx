@@ -10,7 +10,7 @@ const SQAModuleNav = () => {
     <>
       <Search />
       <Plus />
-      <Timer />
+      {/* <Timer /> */}
       <History />
       <Options />
     </>

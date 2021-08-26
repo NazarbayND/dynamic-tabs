@@ -2,9 +2,11 @@ import React from "react";
 import { LogoIcon } from "../assets/icons";
 import Form from "../components/Forms/Form";
 import * as yup from "yup";
+import { useDispatch } from "react-redux";
+import { loginAction } from "../store/user/user";
 
 const schema = yup.object().shape({
-  username: yup.string().required().email(),
+  username: yup.string().required(),
   password: yup.string().required(),
 });
 const Languages = [
@@ -24,8 +26,9 @@ const Locations = [
   "India",
 ];
 const LoginPage = () => {
+  const dispatch = useDispatch();
   const handleSubmit = (data) => {
-    console.log(data);
+    dispatch(loginAction({ ...data }));
   };
   return (
     <div className="login">
@@ -46,17 +49,17 @@ const LoginPage = () => {
             type: "password",
           },
         ]}
-        checkbox={["Remember me"]}
-        selects={[
-          {
-            name: "languages",
-            options: Languages,
-          },
-          {
-            name: "locations",
-            options: Locations,
-          },
-        ]}
+        // checkbox={["Remember me"]}
+        // selects={[
+        //   {
+        //     name: "languages",
+        //     options: Languages,
+        //   },
+        //   {
+        //     name: "locations",
+        //     options: Locations,
+        //   },
+        // ]}
         mode="onSubmit"
       />
     </div>
