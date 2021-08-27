@@ -14,7 +14,7 @@ interface Props {
   name: string;
   schema?: AnyObjectSchema;
   mode?: "onChange" | "onBlur" | "onSubmit" | "onTouched" | "all";
-  onSubmit: (data) => void;
+  onSubmit: (data: any) => void;
   inputs?: IInput[];
   selects?: ISelect[];
   checkbox?: string[];
@@ -83,7 +83,7 @@ const Form: React.FC<Props> = ({
         </div>
       )}
 
-      <Button onClick={handleSubmit(onSubmit)}>Login</Button>
+      <Button onClick={handleSubmit(onSubmit)}>{name}</Button>
     </form>
   );
 };

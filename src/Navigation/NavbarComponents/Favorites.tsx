@@ -5,9 +5,9 @@ import { FavoritesIcon } from "../../assets/icons";
 import MenuSubList from "../Menu/MenuSubList";
 import withDropdown from "../../components/Dropdown/withDropdown";
 import withIconContainer from "../IconComponent/withIconContainer";
-import { TabI } from "../../types/types";
+import { ITab } from "../../@types/types";
 
-const FavoritesData = [
+const FavoritesData: Array<ITab> = [
   {
     title: "Warehouse Management System (WMS)",
     path: "/wms",
@@ -31,7 +31,7 @@ const FavoritesData = [
 ];
 
 const FavoritesContent = ({ ...rest }) => {
-  const handleModuleClick = (tab: TabI) => {};
+  const handleModuleClick = (tab: ITab) => {};
   return (
     <MenuSubList
       modules={FavoritesData}

@@ -1,11 +1,11 @@
 import React from "react";
 
 import { CloseIcon } from "../../assets/icons";
-import { TabI } from "../../types/types";
+import { ITab } from "../../@types/types";
 import "./style.scss";
 
 interface Props {
-  tab: TabI;
+  tab: ITab;
   onTabClick: () => void;
   onTabClose: () => void;
 }

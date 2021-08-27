@@ -1,9 +1,9 @@
 import React from "react";
-import { TabI } from "../../types/types";
+import { ITab } from "../../@types/types";
 
 interface Props {
-  modules: TabI[];
-  onModuleClick: (module: TabI) => void;
+  modules: Array<ITab>;
+  onModuleClick: (module: ITab) => void;
   setShowDropdown?: React.Dispatch<boolean>;
 }
 
@@ -15,7 +15,7 @@ const MenuSubList: React.FC<Props> = ({
 }) => {
   return (
     <div className="menu-list">
-      {modules.map((module: TabI) => {
+      {modules.map((module: ITab) => {
         return (
           <div
             key={module.title}

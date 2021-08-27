@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 
 const NotFound = () => {
-  let location = useLocation();
+  let location = useLocation<Location>();
 
   return (
     <div className="not-found">

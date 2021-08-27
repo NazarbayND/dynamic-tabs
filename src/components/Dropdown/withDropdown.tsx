@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RestProps } from "../../types/types";
+import { RestProps } from "../../@types/types";
 import "./style.scss";
 
 interface Props {

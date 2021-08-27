@@ -3,14 +3,10 @@ import React from "react";
 import { OptionsIcon } from "../../assets/icons";
 import withDropdown from "../../components/Dropdown/withDropdown";
 import withLeftDropdown from "../../components/Dropdown/withLeftDropdown";
+import { ITab } from "../../@types/types";
 import withIconContainer from "../IconComponent/withIconContainer";
 
-interface OptionI {
-  path: string;
-  title: string;
-}
-
-const optionsList = [
+const optionsList: Array<ITab> = [
   {
     path: "/reports",
     title: "Reports",
@@ -40,7 +36,7 @@ const optionsList = [
 const OptionsContent = () => {
   return (
     <div className="menu-list">
-      {optionsList.map((option: OptionI) => {
+      {optionsList.map((option: ITab) => {
         return (
           <div key={option.title} className="menu-list__item">
             {option.title}

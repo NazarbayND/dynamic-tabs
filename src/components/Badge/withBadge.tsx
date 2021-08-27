@@ -1,5 +1,5 @@
 import React from "react";
-import { RestProps } from "../../types/types";
+import { RestProps } from "../../@types/types";
 import Badge, { badgePosition } from "./Badge";
 
 interface Props {
