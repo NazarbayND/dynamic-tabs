@@ -17,6 +17,7 @@ const Tabs = () => {
   useEffect(() => {
     selectedTab ? history.push(selectedTab.path) : history.push("/");
   }, [selectedTab, history]);
+
   return (
     <div className="tabs-container">
       {tabs.map((tab: ITab) => {

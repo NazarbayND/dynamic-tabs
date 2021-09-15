@@ -39,7 +39,7 @@ const MenuList: React.FC<Props> = ({ setShowDropdown, ...rest }) => {
             position="right"
             style={{ display: "flex" }}
             mainStyle={{ zIndex: 100 }}
-            contentStyle={{ marginLeft: "14rem", zIndex: 90 }}
+            contentStyle={{ marginLeft: "20rem", zIndex: 90 }}
             title={section.title}
             modules={section.module}
             onModuleClick={handleModuleClick}

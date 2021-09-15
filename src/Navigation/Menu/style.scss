@@ -6,10 +6,10 @@
 }
 
 .menu-list__item {
+  display: inline-block;
   padding: 1rem 2rem;
   color: $color-primary;
-  width: 14rem;
-
+  width: 20rem;
   &.module__item {
     width: 47rem;
     cursor: pointer;
